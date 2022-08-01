@@ -59,6 +59,25 @@ function tampildata($con, $team)
             //uki
             mysqli_query($con, "INSERT INTO uki (uuid,rps,create_at,create_by) VALUES
                                 (UUID(),'" . $rps['uuid'] . "','" . $date . "','" . $user . "')");
+
+echo '<h4>Rencana Pembelajaran Semester (RPS)</h4><table class="table">
+<tr><th>1.</th><th>Nama Program Studi</th><td>:</td><th>' . $prodi['nama'] . '</th></tr>
+<tr><th>2.</th><th>Nama Matakuliah</th><td>:</td><th>' . $matakuliah['nama'] . '</th></tr>
+<tr><th>3.</th><th>Kode</th><td>:</td><th>' . $matakuliah['kode'] . '</th></tr>
+<tr><th>4.</th><th>Semester</th><td>:</td><th>' . $matakuliah['semester'] . '</th></tr>
+<tr><th>5.</th><th>S K S</th><td>:</td><th>' . $matakuliah['sks'] . '(' . $matakuliah['skst'] . ',' . $matakuliah['sksp'] . ')</th></tr>
+<tr><th>6.</th><th>Nama Dosen Pengampu</th><td>:</td><th>';
+echo '<ol>';
+while ($n = mysqli_fetch_array($anggota)) {
+    echo '<li>' . $n['nama_user'] . '</li>';
+}
+echo '</ol>';
+echo '</th></tr>';
+echo '<tr><th rowspan=2>7.</th><th colspan=3>Deskripsi Singkat Mata Kuliah</th></tr>';
+echo '<tr><th colspan=3><textarea class="form-control mytextarea" id="biodata-edit" name="biodata" placeholder="Biodata Singkat Dosen" style="height: 320px;"></textarea></th></tr>';
+echo '<tr><th rowspan=2>8.</th><th colspan=3>8.	Capaian Pembelajaran Lulusan (CPL)</th></tr>';
+echo '<tr><th colspan=3><textarea class="form-control mytextarea" id="biodata-edit" name="biodata" placeholder="Biodata Singkat Dosen" style="height: 320px;"></textarea></th></tr>';
+echo '</table>';
         }
     }
 }
