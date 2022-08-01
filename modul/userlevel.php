@@ -93,6 +93,8 @@ if ($aksi == "tambah") {
                 </div>
             </div>
         </div>
+        </div>
+        
         <script>
             $(document).ready(function() {
                 // tambah data
