@@ -111,13 +111,17 @@
                                        <i class="bx bx-dots-vertical-rounded"></i>
                                    </button>
                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt4">
-                                       <a class="dropdown-item" href="javascript:void(0);">Lihat</a>
+                                       <a class="dropdown-item" href="index.php?menu=userteam">Lihat</a>
                                    </div>
                                </div>
                            </div>
                            <span class="d-block mb-1">Team Teaching</span>
-                           <h3 class="card-title text-nowrap mb-2">0</h3>
-                           <small class="text-danger fw-semibold"><a>Lihat Team Teaching</a></small>
+                           <h3 class="card-title text-nowrap mb-2">
+                            <?php
+                                echo mysqli_num_rows(mysqli_query($con, "SELECT * FROM team WHERE delete_at IS NULL GROUP BY periode,prodi,matakuliah"));
+                            ?>
+                           </h3>
+                           <small class="text-danger fw-semibold"><a href="index.php?menu=userteam">Lihat Team Teaching</a></small>
                        </div>
                    </div>
                </div>
@@ -133,13 +137,17 @@
                                        <i class="bx bx-dots-vertical-rounded"></i>
                                    </button>
                                    <div class="dropdown-menu" aria-labelledby="cardOpt1">
-                                       <a class="dropdown-item" href="javascript:void(0);">Lihat</a>
+                                       <a class="dropdown-item" href="index.php?menu=userrps">Lihat</a>
                                    </div>
                                </div>
                            </div>
                            <span class="fw-semibold d-block mb-1">Data RPS</span>
-                           <h3 class="card-title mb-2">0</h3>
-                           <small class="text-success fw-semibold"><a>Lihat Data RPS</a></small>
+                           <h3 class="card-title mb-2">
+                            <?php
+                                echo mysqli_num_rows(mysqli_query($con, "SELECT * FROM rps WHERE delete_at IS NULL"));
+                            ?>
+                           </h3>
+                           <small class="text-success fw-semibold"><a href="index.php?menu=userrps">Lihat Data RPS</a></small>
                        </div>
                    </div>
                </div>
