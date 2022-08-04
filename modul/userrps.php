@@ -125,7 +125,10 @@ function tampildata($con, $team, $prosesrps)
 
                 echo '<input type="hidden" name="rps" value="' . $rps['uuid'] . '">';
                 echo '<input type="hidden" name="team" value="' . $team . '">';
-                echo '</table></div>';
+                echo '</table></div><br>';
+                echo '<div class="table-responsive tabledatarps">';
+                tampiltabel($con, $rps['uuid']);
+                echo '</div>';
             } else {
                 echo '<tr><th>7.</th><th colspan=3>Deskripsi Singkat Mata Kuliah</th></tr>';
                 echo '<tr><td colspan=4>' . cetakHTML($rps['deskripsi']) . '</td></tr>';
