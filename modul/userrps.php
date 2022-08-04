@@ -402,6 +402,7 @@ if ($aksi == "tambah") {
                 selector: '.mytextarea',
                 menubar: false,
                 toolbar: "bold italic underline",
+                plugins: ['powerpaste','paste'],
                 images_upload_url: 'acceptor.php',
                 images_dataimg_filter: function(img) {
                     return !img.hasAttribute('internal-blob'); // blocks the upload of <img> elements with the attribute "internal-blob".
