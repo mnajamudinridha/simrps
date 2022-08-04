@@ -27,7 +27,7 @@ function tampildata($con)
                     <div class="card-body">
                         <div class="table-responsive">
                             <table class="table table-bordered table-hover">
-                              <tr><th>No</th><th>Pertanyaan</th><th>Jawaban</th></tr>';
+                              <tr><th>No</th><th>Pertanyaan</th><th style="min-width:250px;">Jawaban</th></tr>';
         $no = 1;
         while ($a = mysqli_fetch_array($pertanyaan)) {
             $querycheck = mysqli_query($con, "SELECT * FROM jawaban WHERE user = '" . $biodata['uuid'] . "' AND pertanyaan = '" . $a['uuid'] . "' ");

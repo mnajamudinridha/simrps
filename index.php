@@ -41,6 +41,27 @@ if ($method == "ajax") {
         <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="assets/star/star-rating-svg.css">
         <link rel="stylesheet" type="text/css" href="assets/star/demo.css">
+        <style>
+            @media print {
+                .table-rps th {
+                    font-size: 10px;
+                }
+
+                .table-rps td {
+                    font-size: 10px;
+                }
+
+                .table-rps td {
+                    padding: 0.625rem 5px;
+                    margin: 0px;
+                }
+
+                .table-rps th {
+                    padding: 0.625rem 5px;
+                    margin: 0px;
+                }
+            }
+        </style>
         <script src="assets/vendor/libs/jquery/jquery.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="https://cdn.jsdelivr.net/npm/tom-select@2.1.0/dist/js/tom-select.complete.min.js"></script>
@@ -48,7 +69,7 @@ if ($method == "ajax") {
         <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
         <script src="assets/vendor/js/helpers.js"></script>
         <script src="assets/js/config.js"></script>
-        <script src="assets/js/library.js?v=4"></script>
+        <script src="assets/js/library.js?v=5"></script>
         <script src="https://cdn.tiny.cloud/1/mv0mzrchoasedvje0gwovxh0647pzzfwvg27p32yjgn7ii6d/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     </head>
 
